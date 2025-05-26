@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --background: #3b258c;
+  --foreground: #ffffff;
+  --primary: #6C63FF;
+  --primary-hover: #5548c8;
+  --secondary: #FFD700;
+  --accent: #FF6B00;
+  --card-bg: #fff;
+  --sidebar-bg: #2d2176;
+  --text-muted: #7c7c9a;
+  --border-color: #e0e0f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-card-bg: var(--card-bg);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border-color);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: #3b258c;
+  color: var(--foreground);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sidebar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Add wave/curve utility */
+.curve-top {
+  border-top-left-radius: 80% 40%;
+  border-top-right-radius: 80% 40%;
+}
+.curve-bottom {
+  border-bottom-left-radius: 80% 40%;
+  border-bottom-right-radius: 80% 40%;
+}
+
+/* Card styles: update for white background and shadow */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(60, 40, 120, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 32px rgba(60, 40, 120, 0.18);
+}
+
+/* Button styles: vibrant, rounded, shadow */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.15);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.22);
+}
+
+/* Progress bar styles */
+.progress-bar {
+  background: var(--border-color);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: var(--primary);
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
