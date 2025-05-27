@@ -1,5 +1,10 @@
 import Link from 'next/link';
 import Image from "next/image";
+// ...existing code...
+import Navbar from '../components/Navbar'; // ✅ assuming file is in /components
+
+
+
 
 const BookshelfSVG = () => (
   <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
